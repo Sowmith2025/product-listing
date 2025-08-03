@@ -1,10 +1,10 @@
 const products = [
     { name: "Smartphone", category: "Electronics", price: 299, rating: 4.5, image: "1.jpeg" },
-    { name: "Laptop", category: "Electronics", price: 899, rating: 4.7, image: "https://via.placeholder.com/250x200?text=Laptop" },
-    { name: "T-Shirt", category: "Clothing", price: 25, rating: 4.2, image: "https://via.placeholder.com/250x200?text=T-Shirt" },
-    { name: "Jeans", category: "Clothing", price: 60, rating: 4.0, image: "https://via.placeholder.com/250x200?text=Jeans" },
-    { name: "Novel", category: "Books", price: 15, rating: 4.8, image: "https://via.placeholder.com/250x200?text=Novel" },
-    { name: "Cookbook", category: "Books", price: 30, rating: 4.4, image: "https://via.placeholder.com/250x200?text=Cookbook" }
+    { name: "Laptop", category: "Electronics", price: 899, rating: 4.7, image: "2.jpg" },
+    { name: "T-Shirt", category: "Clothing", price: 25, rating: 4.2, image: "3.webp" },
+    { name: "Jeans", category: "Clothing", price: 60, rating: 4.0, image: "4.webp" },
+    { name: "Novel", category: "Books", price: 15, rating: 4.8, image: "5.jpeg" },
+    { name: "Cookbook", category: "Books", price: 30, rating: 4.4, image: "6.jpeg" }
 ];
 
 const productGrid = document.getElementById("productGrid");
@@ -78,4 +78,5 @@ sortOption.addEventListener("change", applyFilters);
 
 // Initial render
 renderProducts(products);
+
 
