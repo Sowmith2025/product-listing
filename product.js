@@ -1,5 +1,5 @@
 const products = [
-    { name: "Smartphone", category: "Electronics", price: 299, rating: 4.5, image: "https://via.placeholder.com/250x200?text=Smartphone" },
+    { name: "Smartphone", category: "Electronics", price: 299, rating: 4.5, image: "1.jpeg" },
     { name: "Laptop", category: "Electronics", price: 899, rating: 4.7, image: "https://via.placeholder.com/250x200?text=Laptop" },
     { name: "T-Shirt", category: "Clothing", price: 25, rating: 4.2, image: "https://via.placeholder.com/250x200?text=T-Shirt" },
     { name: "Jeans", category: "Clothing", price: 60, rating: 4.0, image: "https://via.placeholder.com/250x200?text=Jeans" },
@@ -78,3 +78,4 @@ sortOption.addEventListener("change", applyFilters);
 
 // Initial render
 renderProducts(products);
+
