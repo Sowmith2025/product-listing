@@ -1,3 +1,4 @@
+
 const products = [
     { name: "Smartphone", category: "Electronics", price: 299, rating: 4.5, image: "1.jpeg" },
     { name: "Laptop", category: "Electronics", price: 899, rating: 4.7, image: "2.jpg" },
@@ -38,27 +39,23 @@ function renderProducts(list) {
 function applyFilters() {
     let filteredProducts = [...products];
 
-    // Search filter
     const searchValue = searchInput.value.toLowerCase();
     if (searchValue) {
         filteredProducts = filteredProducts.filter(p => p.name.toLowerCase().includes(searchValue));
     }
 
-    // Category filter
     if (categoryFilter.value) {
         filteredProducts = filteredProducts.filter(p => p.category === categoryFilter.value);
     }
 
-    // Price filter
     if (priceFilter.value) {
         const [min, max] = priceFilter.value.split("-").map(Number);
         filteredProducts = filteredProducts.filter(p => {
             if (max) return p.price >= min && p.price <= max;
-            return p.price >= min; // For "Over $100"
+            return p.price >= min;
         });
     }
 
-    // Sorting
     if (sortOption.value === "price-asc") {
         filteredProducts.sort((a, b) => a.price - b.price);
     } else if (sortOption.value === "price-desc") {
@@ -70,16 +67,9 @@ function applyFilters() {
     renderProducts(filteredProducts);
 }
 
-// Event Listeners
 searchInput.addEventListener("input", applyFilters);
 categoryFilter.addEventListener("change", applyFilters);
 priceFilter.addEventListener("change", applyFilters);
 sortOption.addEventListener("change", applyFilters);
 
-// Initial render
 renderProducts(products);
-
-
-
-
-
